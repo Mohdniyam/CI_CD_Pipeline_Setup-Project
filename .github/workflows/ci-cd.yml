@@ -17,10 +17,10 @@ jobs:
           script: |
             set -e
             cd /home/root/
-            if [ -d "static-react-continous-intigration/.git" ]; then
-              cd static-react-continous-intigration
+            if [ -d "CI_CD_Pipeline_Setup-Project/.git" ]; then
+              cd CI_CD_Pipeline_Setup-Project
               git pull origin master || (echo "Failed to pull existing repository" && exit 1)
             else
-              git clone git@github.com:hrusikesh8280/static-react-continous-intigration.git || (echo "Failed to clone repository" && exit 1)
+              git clone https://github.com/Mohdniyam/CI_CD_Pipeline_Setup-Project.git || (echo "Failed to clone repository" && exit 1)
             fi
             echo 'Deployment successful to DigitalOcean'
